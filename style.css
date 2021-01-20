@@ -1,7 +1,66 @@
+body{
+    background:rgb(129, 158, 196);
+}
+
 .header {
     text-align: center;
     font-weight: bold;
-    font-size: 50px;
+    /* font-size: 50px; */
+}
+
+#question{
+    text-align:center;
+    background: rgb(177, 194, 125);
+    margin: 10%;
+    padding: 45px;
+    
+}
+#answer{
+    display:none;
+}
+
+#flip{
+    display:flex;
+    text-align: center;
+   
+    margin: 20px;
+    font-size: medium;
+    background:lightpink;
+    padding:10px 20px 10px 20px
+    
+}
+.score{
+    display:flex;
+    flex-wrap: wrap;
+    /* border:2px solid black */
+}
+#cor{
+    /* display:flex; */
+    text-align: center;
+    border: 20px sold black;
+    margin: 20px;
+    font-size: large;
+    background:green;
+    color:white;
+    padding:10px 20px 10px 20px
+}
+
+#next{
+    text-align: center;
+    border: 20px sold black;
+    margin: 20px;
+    font-size: large;
+    padding:10px 20px 10px 20px
+}
+
+#inc{
+    text-align: center;
+    border: 20px sold black;
+    margin: 20px;
+    font-size: large;
+    background:red;
+    color:white;
+    padding:10px 20px 10px 20px
 }
 
 /* .correct {
