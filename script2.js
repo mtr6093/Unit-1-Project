@@ -19,7 +19,7 @@ cards.push(new card('4', 'How many weapons bays does the B-1b have?', '3'))
 cards.push(new card('5', 'What is the wingspan of the B-1b?', 'Forward: 137 feet;  Swept: 79 feet'))
 cards.push(new card('6', 'How much did each B-1b cost?', '$317 million'))
 cards.push(new card('7', 'How many B-1b aircraft were built?', '100'))
-cards.push(new card('7', 'How many B-1b aircraft are still in service', '62'))
+cards.push(new card('8', 'How many B-1b aircraft are still in service', '62'))
 
 
 //Flashcard showing section
@@ -64,24 +64,31 @@ fButton.addEventListener( 'click', function() {
 let cButton = document.getElementById('cor')
 let iButton = document.getElementById('inc')
 
-let cScore = 1
-let cScoreDisplay = document.getElementById('crc').textContent += cScore
-console.log("C", cScore)
+let cScore = 0
+// let cScoreDisplay = document.getElementById('crc').textContent += cScore
+
 
 let iScore = 3
-let iScoreDisplay = document.getElementById('icrc').textContent += iScore
+// let iScoreDisplay = document.getElementById('icrc').textContent += iScore
 
 cButton.addEventListener('click', function(){
     console.log("c clicked")
    
+//    cScoreDisplay = document.getElementById('crc').textContent += cScore
+   console.log(cScore)
     if (iScore == 0){
         cScore = cScore +1
+        
+        cScoreDisplay = document.getElementById('crc').textContent + cScore
+        // return(cScore) 
         console.log(cScore)
         console.log(iScore)
-        return(cScore)       
+              
     }else {
         cScore = cScore +1
         iScore = iScore -1
+        cScoreDisplay = document.getElementById('crc').textContent += cScore
+        iScoreDisplay = document.getElementById('icrc').textContent += iScore
         console.log(cScore)
         console.log(iScore)
         return(cScore)
