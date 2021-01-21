@@ -7,19 +7,38 @@
     <link rel="stylesheet" href="style2.css" />
 </head>
 <body>
-    <div class="header">
-        <h1>B-1b Knowledge Improver/Game</h1>
-    </div>
+    <div class="container">
+    <header>
+        <div class="header">
+            <h1>B-1b Knowledge Improver/Game</h1>
+        </div>
+        <!-- <nav> -->
+            <!-- <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-ul" id="nav">
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">H2</a> </li>
+                <li><a href="#">H3</a> </li>
+                <li><a href="#">H4</a> </li>
+            </ul>
+            <div class="burger"></div> -->
+        <!-- </nav> -->
+    </header>
+    
+    <main>
+        <div class="scene scene--card">
+        <div class="card">
+            <div class="card__face card__face--front" id="question">front</div>
+            <div class="card__face card__face--back" id="answer">back</div>
+        </div>
+        </div>
+    </main>
 
-    <div class="scene scene--card">
-    <div class="card">
-      <div class="card__face card__face--front" id="question">front</div>
-      <div class="card__face card__face--back" id="answer">back</div>
-    </div>
-  </div>
-  
+    <div>
    <button class="flipper" id='flip' type='button'>Flip Card</button>
-    <div class='score' id=s1>
+  </div>
+    <div class='score' id='s1'>
         <button class='correct' id='cor' type='button'>Correct</button>
 
         <button id="next" type='button'>Next</button>
@@ -28,7 +47,9 @@
     </div>
     <div class='scores' id='scor'>
         <div id='crc'> Correct: </div>
+        <span id='crcv'>0</span>
         <div id='icrc'>Incorrect: </div>
+        <span id='icrcv'>0</span>
     </div>
 
   
@@ -36,8 +57,7 @@
 
 
     <script src="script2.js"></script>
+</div>
 </body>
 </html>
 
-</body>
-</html>
