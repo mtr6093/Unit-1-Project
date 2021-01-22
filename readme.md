@@ -20,3 +20,11 @@ Below is  alist of current features implemented on this web page.
     * "c" = Correct
     * "i' = Incorrect
     * "f" = Flip
+
+
+## Development of This Website
+
+This website was developed using only HTML, Javascript, and CSS. There are no other software packages required for use.
+
+
+&copy; Marc Rivers
