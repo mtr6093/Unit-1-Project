@@ -28,7 +28,7 @@ class card {
 let cards = [] 
 
 // flash cards and content
-cards.push(new card('1','How many Mk82 500lb bombs can the B-1b carry internally?', '84'))
+cards.push(new card('1','How many Mk82 500 pound bombs can the B-1b carry internally?', '84'))
 cards.push(new card('2', 'How many crew memebers fly in the B-1b?', '4'))
 cards.push(new card('3', 'How many engines are on the B-1b?', '4'))
 cards.push(new card('4', 'How many weapons bays does the B-1b have?', '3'))
