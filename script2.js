@@ -112,8 +112,8 @@ function correct() {
         qDisplay.textContent = display[0].Q
     }else {
         display.splice(0,1)
-        aDisplay.textContent = ""
-        qDisplay.textContent = ""
+        aDisplay.textContent = "COMPLETE!"
+        qDisplay.textContent = "COMPLETE!"
         document.querySelector('#cor').disabled = true
     }
 }
