@@ -1,15 +1,15 @@
 body{
-    background:rgb(118, 168, 155);
+    background:rgb(92, 121, 113);
 }
 button{
     cursor: pointer;
     text-align: center;
     border: 5px solid black;
     margin: 20px;
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
     padding:10px 20px 10px 20px;
-    color:rgb(31, 29, 29);
+    color:black;
 }
 
 .header {
@@ -75,7 +75,7 @@ button{
     display:flex;
     flex-wrap: wrap;
     margin: 20px;
-    background:lightpink;
+    background: rgb(250, 237, 212);
    
     
 }
@@ -87,21 +87,17 @@ button{
 
 /* Correct button */
 #cor{
-    /* display:flex; */
-    background:rgb(0, 109, 0);
-    
-    
+    background:rgb(0, 109, 0);  
 }
 
 /* Next button */
 #next{
-    
+    background: rgb(250, 237, 212);
 }
 
 /* Incorrect button */
 #inc{
     background:rgb(172, 2, 2);
-    
 }
 
 .scores {
@@ -119,7 +115,7 @@ button{
     margin: 2rem auto;
 }
 .accordion-item {
-    background-color: #fff;
+    background-color: beige;
     color: black;
     margin: 1rem 0;
     border-radius: 0.5rem;
