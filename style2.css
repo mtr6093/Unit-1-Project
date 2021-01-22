@@ -49,7 +49,7 @@ button{
     /* margin:10%;
     padding:45px; */
     /* line-height: 260px; */
-    color: white;
+    color: rgb(44, 50, 48);
     text-align: center;
     font-size: 30px;
     /* -webkit-backface-visibility: hidden; */
@@ -57,7 +57,7 @@ button{
 }
   
 .card__face--front {
-    background: rgb(177, 194, 125);
+    background: rgb(5, 148, 146);
     text-align: center;
     /* border:3px solid blue */
     
@@ -110,7 +110,7 @@ button{
 }
 
 .accordion {
-    width: 90%;
+    width: 70%;
     max-width: 700px;
     margin: 2rem auto;
 }
@@ -140,6 +140,7 @@ button{
 }
 .accordion-item-header.active::after {
     transform: rotate(180deg);
+    
 }
 .accordion-item-body {
     max-height: 0;
