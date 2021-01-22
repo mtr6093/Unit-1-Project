@@ -6,7 +6,7 @@ main{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 3px solid red
+    /* border: 3px solid red; */
 }
 button{
     cursor: pointer;
@@ -16,7 +16,8 @@ button{
     font-size: 30px;
     font-weight: bold;
     padding:10px 20px 10px 20px;
-    color:black;
+    background-color: black;
+    color:white;
 }
 .header {
     text-align: center;
@@ -26,20 +27,20 @@ button{
     display: flex;
     flex-wrap: wrap;
     width:60%;
-    /* max-width: 1500px; */
-    height: 150px;
+    max-width: 900px;
+    height: 100px;
     margin: 30px 0;
     perspective: 1200px;
-    /* padding: 3%; */
-    border: 3px solid red;
+    padding: 3%;
+    /* border: 3px solid red; */
     justify-content: center;
 }
 .card {
-    width: 80%;
-    height: 50%;
+    width: 90%;
+    height: 90%;
     transition: transform 1s;
     transform-style: preserve-3d;
-    border:3px solid red;
+    /* border:3px solid red; */
     justify-content: center;
 }
 .card.is-flipped {
@@ -75,8 +76,8 @@ button{
 /* flip button */
 #flip{
     margin: 20px;
-    background: rgb(250, 237, 212);
-    width:500px
+    /* background: rgb(250, 237, 212); */
+    width:500px;
 }
 .score{
     display:flex;
@@ -90,7 +91,7 @@ button{
 }
 /* Next button */
 #next{
-    background: rgb(250, 237, 212);
+    /* background: rgb(250, 237, 212); */
 }
 /* Incorrect button */
 #inc{
@@ -119,6 +120,7 @@ button{
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 2rem;
     line-height: 1.25rem;
+    font-size: large;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -130,7 +132,7 @@ button{
     font-size: 35px;
     position: absolute;
     right: 1rem;
-    transition: transform 0.1s ease-in-out
+    transition: transform 0.1s ease-in-out;
 }
 .accordion-item-header.active::after {
     transform: rotate(180deg);
@@ -145,4 +147,16 @@ button{
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 1px solid;
+}
+@media (max-width: 768px) {
+    .scene {
+        width:90%;
+        max-width: 900px;
+        margin: 20px 0;
+    }
+    .card__face--front {
+        font-size: 25px;
+    }
+    .accordion-item-header {
+        font-size: medium;
 }
