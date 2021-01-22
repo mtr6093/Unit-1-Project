@@ -115,7 +115,7 @@ button{
     font-size: 20px;
     font-weight: bold;
     color:white;
-    border:3px solid red;
+    /* border:3px solid red; */
 }
 .accordion {
     width: 70%;
