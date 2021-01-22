@@ -110,11 +110,13 @@ button{
 .scores {
     display: flex;
     flex-wrap:wrap;
+    height:40px;
     justify-content:space-evenly;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
     color:white;
+    margin:30px;
     /* border:3px solid red; */
 }
 .accordion {
@@ -171,5 +173,8 @@ button{
     }
     .accordion-item-header {
         font-size: medium;
-}
+    }
+    .accordion {
+        width: 95%;
+    }
 }
