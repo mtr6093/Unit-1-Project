@@ -1,5 +1,24 @@
 
-//Flashcard builder section
+let accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+
+
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+        accordionItemHeader.classList.toggle("active");
+    let accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
+    else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+        
+  });
+});
+
+//Flashcard object builder
 class card {
     constructor (number, Q, A) {
         this.number = number
@@ -8,8 +27,8 @@ class card {
     }
 }
 
-
-let cards = [] //array of flashcards
+//array of flashcards
+let cards = [] 
 
 // flash cards and content
 cards.push(new card('1','How many Mk82 500lb bombs can the B-1b carry internally?', '84'))
@@ -39,17 +58,17 @@ qDisplay.textContent = display[0].Q
  nButton.addEventListener('click', next)
 
  function next() {
+     if(cards.length==0){
+        document.querySelector('#next').disabled = true
+     } else {
      cards.push((display)[0])
      display.splice(0,1)
      display.push((cards)[0])
      cards.splice(0,1)
      aDisplay.textContent = display[0].A
      qDisplay.textContent = display[0].Q
-     console.log(display)
-    console.log(cards)
+    }
  }
-
-
  
 //  Pile of correct cards removed from deck
 let cpile = []
@@ -63,80 +82,73 @@ fButton.addEventListener( 'click', cardF)
 
 // function for card flipping
 function cardF () {
-    // console.log("flip click")
     dCard.classList.toggle('is-flipped')
 }
-
-
-
 
 // Scoring Section
 let cButton = document.getElementById('cor')
 let iButton = document.getElementById('inc')
-
-let cScore = 0
+ let cScore = 0
 let cScoreDisplay = document.getElementById('crcv')
 let iScore = 0
 let iScoreDisplay = document.getElementById('icrcv')
 
 cButton.addEventListener('click', correct)
+
 // function for marking correct answer
 function correct() {
-   console.log(cScore)
-    if (iScore == 0 && cards.length || 0){
+    if (iScore == 0){
         cScore = cScore +1
         cScoreDisplay.innerText = cScore
-        console.log(cScore)
-        console.log(iScore)
-              
-    }else if (cards.length||0){
+    }else{
         cScore = cScore +1
         iScore = iScore -1
         cScoreDisplay.innerText = cScore
         iScoreDisplay.innerText = iScore
-        console.log(cScore)
-        console.log(iScore)
-    }    
-    console.log("c clicked")
-    cpile.push(display)[0]
-    display.splice(0,1)
-    display.push((cards)[0])
-    cards.splice(0,1)
-    aDisplay.textContent = display[0].A
-    qDisplay.textContent = display[0].Q
-    console.log(cards)
+    }  
+    if (cards.length||0) {
+        cpile.push(display)[0]
+        display.splice(0,1)
+        display.push((cards)[0])
+        cards.splice(0,1)
+        aDisplay.textContent = display[0].A
+        qDisplay.textContent = display[0].Q
+    }else {
+        display.splice(0,1)
+        aDisplay.textContent = ""
+        qDisplay.textContent = ""
+        document.querySelector('#cor').disabled = true
+    }
 }
 
-
 iButton.addEventListener('click', incorrect)
+
 // function for marking incorrect answer
 function incorrect() { 
-                   
+    if (cards.length==0) {
+        document.querySelector('#inc').disabled = true
+    } else {
     iScore = iScore +1
     iScoreDisplay.innerText = iScore
-    console.log(cScore)
-    console.log(iScore)
-    console.log(cards)
-
-    console.log("i clicked")
     cards.push((display)[0])
     display.splice(0,1)
     display.push((cards)[0])
     cards.splice(0,1)
     aDisplay.textContent = display[0].A
     qDisplay.textContent = display[0].Q
+    }
 }
 
 // Keyboard shortcut keys
 addEventListener("keydown", function(e){
     let keyName=e.code
-    if (keyName == 'Space'){ 
+    if (keyName == 'Space' && cards.length||0){ 
         console.log(keyName)
         next()
-    }else if (keyName == "KeyC"){
+    }else if (keyName == "KeyC" && cards.length||0){
         console.log(keyName)
         correct()
-    }else if (keyName== "KeyI") {
+    }else if (keyName== "KeyI" && cards.length||0) {
         console.log(keyName)
         incorrect()
     }else if (keyName== "KeyF") {
