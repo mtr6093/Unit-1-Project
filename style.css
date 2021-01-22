@@ -1,6 +1,15 @@
-body{
+
+.gradient {
+    background-color: black;
+    background-image: linear-gradient( black, rgb(92, 49, 49));
+}
+
+/* body{
     background:rgb(92, 121, 113);
-    
+} */
+header{
+    color: white;
+    padding:25px
 }
 main{
     display:flex;
@@ -16,7 +25,7 @@ button{
     font-size: 30px;
     font-weight: bold;
     padding:10px 20px 10px 20px;
-    background-color: black;
+    background-color: rgb(46, 45, 45);
     color:white;
 }
 .header {
@@ -58,12 +67,12 @@ button{
     backface-visibility: hidden;
 }
 .card__face--front {
-    background: rgb(5, 148, 146);
+    background: rgb(205, 183, 113);
     justify-content: center;
     text-align: center;
 }
 .card__face--back {
-    background: rgb(22, 204, 125);
+    background: rgb(113, 165, 111);
     transform: rotateY(180deg);
     text-align: center;
     justify-content: center;
@@ -83,6 +92,7 @@ button{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
+   
    
 }
 /* Correct button */
@@ -104,6 +114,8 @@ button{
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    color:white;
+    border:3px solid red;
 }
 .accordion {
     width: 70%;
@@ -159,4 +171,5 @@ button{
     }
     .accordion-item-header {
         font-size: medium;
+}
 }
